@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Card from './Card'
+import Technologies from './Technologies'
+import Resume from './Resume'
+import Footer from './Footer'
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <p>Software Engenier with Full Stack profile combining ruby&react </p>
+        <p>Ruby on Rails Backend dev, almost 5 years experience</p>
+        <p>ReactJs Frontend dev, less 1 year experience</p>
       </header>
+      <Card />
+      <Technologies />
+      <Resume />
+      <Footer />
     </div>
   );
 }
