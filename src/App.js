@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
+import Header from './Header'
 import Card from './Card'
 import Technologies from './Technologies'
 import Resume from './Resume'
@@ -7,20 +8,42 @@ import Footer from './Footer'
 
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header>
-        <p>Software Engenier with Full Stack profile combining ruby&react </p>
-        <p>Ruby on Rails Backend dev, almost 5 years experience</p>
-        <p>ReactJs Frontend dev, less 1 year experience</p>
-      </header>
-      <Card />
-      <Technologies />
-      <Resume />
-      <Footer />
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      first_name: '',
+      last_name: '',
+      email: '',
+    };
+    this.handleStatusChange = this.handleStatusChange.bind(this);
+  }
+
+  handleStatusChange (state) {
+    this.setState(state)
+  }
+
+  componentDidMount () {
+    var state = {
+      first_name: 'Gaston',
+      last_name: 'Massimino',
+      email: 'gamassimino01@gmail.com'
+    }
+    this.handleStatusChange(state)
+  };
+
+  render () {
+    return (
+      <div className="App">
+        <Header />
+        <Card {...this.state}/>
+        <Technologies />
+        <Resume />
+        <Footer />
+      </div>
+    );
+
+  }
 }
 
 export default App;
