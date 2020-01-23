@@ -24,12 +24,9 @@ class App extends Component {
   }
 
   componentDidMount () {
-    var state = {
-      first_name: 'Gaston',
-      last_name: 'Massimino',
-      email: 'gamassimino01@gmail.com'
-    }
-    this.handleStatusChange(state)
+    fetch('https://business-card-api.herokuapp.com/api/v1/people/1.json')
+      .then(response => response.json())
+      .then(data => this.handleStatusChange(data));
   };
 
   render () {

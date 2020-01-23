@@ -15,7 +15,7 @@ function Card(props) {
           <input name="firstName"
             defaultValue={props.first_name}
             className="terminal-input"
-            readOnly="true"
+            readOnly={true}
           />
         </div>
         <div className="lastname-container">
@@ -23,7 +23,7 @@ function Card(props) {
           <input name="lastName"
             defaultValue={props.last_name}
             className="terminal-input"
-            readOnly="true"
+            readOnly={true}
           />
         </div>
         <div className="email-container">
@@ -31,7 +31,7 @@ function Card(props) {
           <input name="email"
             defaultValue={props.email}
             className="terminal-input"
-            readOnly="true"
+            readOnly={true}
           />
         </div>
         <br/>
