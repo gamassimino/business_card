@@ -1,4 +1,4 @@
 ## Available on Heroku
 
-https://bussines-card.herokuapp.com/
+http://bussines-card.herokuapp.com/
 
